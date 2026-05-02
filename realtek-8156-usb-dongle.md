@@ -9,6 +9,9 @@
 - Install it using `dpkg -i <filename.deb>`
 - ideally, `reboot`
 
+## Pre-compile
+Whenever possible use `dkms install realtek-r8152/2.21.4 -k 7.0.0-3-pve` (or similar) after running ```apt upgrade``` against any newly installed kernel. This will help you prevent issues when rebooting.
+
 ## After upgrade of kernel version (or sometimes after reboot)
 
 - Use `dmesg | grep r8152` to see if/what is wrong
