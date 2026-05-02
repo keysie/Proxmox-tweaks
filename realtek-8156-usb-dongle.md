@@ -20,3 +20,8 @@
   - Load module using `sudo modprobe r8152`
   - Reload pve interfaces with `ifreload -a`
   - (Maybe adjust naming of interfaces in your bridges etc.)
+
+## Kernel version 7.0
+
+- See [the issue](https://github.com/awesometic/realtek-r8152-dkms/issues/37) and [source 1](https://github.com/torvalds/linux/commit/24c7763) and [source 2](https://aur.archlinux.org/packages/r8152-dkms?O=0&PP=10#comment-1067256)
+- TLDR: Modify ```/var/lib/dkms/realtek-r8152/2.21.4/source/src/r8152.c``` to include the line ```#include <linux/hex.h>```
